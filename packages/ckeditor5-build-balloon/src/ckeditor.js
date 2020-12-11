@@ -6,7 +6,8 @@
 // The editor creator to use.
 import BalloonEditorBase from '@ckeditor/ckeditor5-editor-balloon/src/ballooneditor';
 
-import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment'
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
@@ -37,6 +38,7 @@ export default class BalloonEditor extends BalloonEditorBase {}
 BalloonEditor.builtinPlugins = [
 	Essentials,
 	Alignment,
+	FontSize,
 	UploadAdapter,
 	Autoformat,
 	Bold,
@@ -66,6 +68,7 @@ BalloonEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
+			'fontSize',
 			'|',
 			'bold',
 			'italic',

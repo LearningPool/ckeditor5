@@ -6,6 +6,8 @@
 // The editor creator to use.
 import BalloonEditorBase from '@ckeditor/ckeditor5-editor-balloon/src/ballooneditor';
 
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
@@ -34,6 +36,8 @@ export default class BalloonEditor extends BalloonEditorBase {}
 
 // Plugins to include in the build.
 BalloonEditor.builtinPlugins = [
+	FontSize,
+	Alignment,
 	Essentials,
 	UploadAdapter,
 	Autoformat,
@@ -64,6 +68,7 @@ BalloonEditor.defaultConfig = {
 	toolbar: {
 		items: [
 			'heading',
+			// 'fontSize',
 			'|',
 			'bold',
 			'italic',
@@ -73,6 +78,7 @@ BalloonEditor.defaultConfig = {
 			'|',
 			'indent',
 			'outdent',
+			'alignment',
 			'|',
 			'imageUpload',
 			'blockQuote',
@@ -97,6 +103,23 @@ BalloonEditor.defaultConfig = {
 			'mergeTableCells'
 		]
 	},
+	// fontSize: {
+	// 	options: [
+	// 			8,
+	// 			9,
+	// 			10,
+	// 			11,
+	// 			'default',
+	// 			14,
+	// 			18,
+	// 			24,
+	// 			30,
+	// 			36,
+	// 			48,
+	// 			60,
+	// 			72
+	// 	]
+	// },
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
